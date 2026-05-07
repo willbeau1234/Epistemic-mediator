@@ -1,0 +1,136 @@
+{
+  "timestamp": "2026-05-05T16:13:51.726830",
+  "experiment": "rigorous_statistics",
+  "config": {
+    "num_sims": 1000,
+    "n_bootstrap": 10000,
+    "n_permutations": 10000,
+    "alpha": 0.05,
+    "n_comparisons": 5,
+    "bonferroni_alpha": 0.01
+  },
+  "comparisons": [
+    {
+      "comparison": "Baseline vs Reactive Auditor",
+      "group1": "baseline",
+      "group2": "reactive_auditor",
+      "spiral_rate_1": 0.536,
+      "spiral_rate_1_ci": [
+        0.505,
+        0.566
+      ],
+      "spiral_rate_2": 0.166,
+      "spiral_rate_2_ci": [
+        0.143,
+        0.189
+      ],
+      "difference": 0.37,
+      "p_value_raw": 0.0,
+      "cohens_h": 0.8035802985125013,
+      "cohens_h_interp": "large",
+      "cohens_d": 0.7034973771093038,
+      "cohens_d_interp": "medium",
+      "p_value_bonferroni": 0.0,
+      "significant_bonferroni": 1.0
+    },
+    {
+      "comparison": "Baseline vs Belief Versioning",
+      "group1": "baseline",
+      "group2": "belief_versioning",
+      "spiral_rate_1": 0.536,
+      "spiral_rate_1_ci": [
+        0.505,
+        0.566
+      ],
+      "spiral_rate_2": 0.081,
+      "spiral_rate_2_ci": [
+        0.064,
+        0.098
+      ],
+      "difference": 0.455,
+      "p_value_raw": 0.0,
+      "cohens_h": 1.0656699764618656,
+      "cohens_h_interp": "large",
+      "cohens_d": 0.8760291954128746,
+      "cohens_d_interp": "large",
+      "p_value_bonferroni": 0.0,
+      "significant_bonferroni": 1.0
+    },
+    {
+      "comparison": "Baseline vs Predictive Control",
+      "group1": "baseline",
+      "group2": "predictive_control",
+      "spiral_rate_1": 0.536,
+      "spiral_rate_1_ci": [
+        0.505,
+        0.566
+      ],
+      "spiral_rate_2": 0.0,
+      "spiral_rate_2_ci": [
+        0.0,
+        0.0
+      ],
+      "difference": 0.536,
+      "p_value_raw": 0.0,
+      "cohens_h": 1.6428586803631002,
+      "cohens_h_interp": "large",
+      "cohens_d": 1.095173193650594,
+      "cohens_d_interp": "large",
+      "p_value_bonferroni": 0.0,
+      "significant_bonferroni": 1.0
+    },
+    {
+      "comparison": "Reactive Auditor vs Belief Versioning",
+      "group1": "reactive_auditor",
+      "group2": "belief_versioning",
+      "spiral_rate_1": 0.166,
+      "spiral_rate_1_ci": [
+        0.143,
+        0.189
+      ],
+      "spiral_rate_2": 0.081,
+      "spiral_rate_2_ci": [
+        0.064,
+        0.098
+      ],
+      "difference": 0.085,
+      "p_value_raw": 0.0,
+      "cohens_h": 0.2620896779493642,
+      "cohens_h_interp": "small",
+      "cohens_d": 0.13746750557832693,
+      "cohens_d_interp": "negligible",
+      "p_value_bonferroni": 0.0,
+      "significant_bonferroni": 1.0
+    },
+    {
+      "comparison": "Belief Versioning vs Predictive Control",
+      "group1": "belief_versioning",
+      "group2": "predictive_control",
+      "spiral_rate_1": 0.081,
+      "spiral_rate_1_ci": [
+        0.064,
+        0.098
+      ],
+      "spiral_rate_2": 0.0,
+      "spiral_rate_2_ci": [
+        0.0,
+        0.0
+      ],
+      "difference": 0.081,
+      "p_value_raw": 0.0,
+      "cohens_h": 0.5771887039012347,
+      "cohens_h_interp": "medium",
+      "cohens_d": 0.18990552973775493,
+      "cohens_d_interp": "negligible",
+      "p_value_bonferroni": 0.0,
+      "significant_bonferroni": 1.0
+    }
+  ],
+  "summary": {
+    "significant_after_bonferroni": 5.0,
+    "total_comparisons": 5,
+    "largest_effect_h": 1.6428586803631002,
+    "largest_effect_d": 1.095173193650594
+  },
+  "key_finding": "All 5 comparisons remain statistically significant after Bonferroni correction (adjusted \u03b1 = 0.0100). BCa bootstrap CIs (n=10000) and permutation tests (n=10000) provide robust inference. Effect sizes range from 0.26 to 1.64 (Cohen's h)."
+}

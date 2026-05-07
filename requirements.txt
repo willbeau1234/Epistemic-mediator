@@ -1,0 +1,17 @@
+# Core dependencies for simulation
+jax>=0.4.0
+jaxlib>=0.4.0
+numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+tqdm>=4.65.0
+scikit-learn>=1.2.0
+
+# Probabilistic programming framework
+# memo is from: https://github.com/probcomp/memo
+# Install via: pip install memo-lang
+# Or see: Chandra et al. (2025) "memo: A probabilistic programming language"
+memo-lang>=0.1.0
+
+# For LLM validation experiments (optional)
+openai>=1.0.0

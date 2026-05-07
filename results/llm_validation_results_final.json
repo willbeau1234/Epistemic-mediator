@@ -1,0 +1,120 @@
+{
+  "experiment_type": "GPT-4o LLM Validation",
+  "date_generated": "2026-05-04",
+  "note": "Results from saved experiment files matching paper Table 2",
+  "source_files": {
+    "high_baseline": "gpt4o_versioning_results_high_sycophancy_nover_20260430_012427.json",
+    "high_versioning": "gpt4o_versioning_results_high_sycophancy_ver_20260430_020833.json",
+    "moderate_baseline": "gpt4o_versioning_results_moderate_sycophancy_nover_20260429_235756.json",
+    "moderate_versioning": "gpt4o_versioning_results_moderate_sycophancy_ver_20260430_004033.json",
+    "reactive_high_t50": "gpt4o_reactive_high_sycophancy_20260503_185712.json",
+    "reactive_moderate_t50": "gpt4o_reactive_moderate_sycophancy_20260503_182147.json",
+    "conservative_analysis": "conservative_coding_results.json"
+  },
+  "table_2_numbers": {
+    "high_sycophancy": {
+      "baseline_original_coding": {
+        "spiral_rate": 1.00,
+        "mean_final_belief": 1.00,
+        "ambiguous_rate": 0.432,
+        "n": 20,
+        "time_horizon": 50
+      },
+      "baseline_conservative_coding": {
+        "spiral_rate": 0.558,
+        "note": "From conservative_coding_results.json: 0.5578300921187309"
+      },
+      "versioning_original_coding": {
+        "spiral_rate": 0.65,
+        "mean_final_belief": 0.876,
+        "ambiguous_rate": 0.420,
+        "n": 20,
+        "time_horizon": 50
+      },
+      "versioning_conservative_coding": {
+        "spiral_rate": 0.370,
+        "note": "From conservative_coding_results.json: 0.3697125256673512"
+      },
+      "reactive_auditor_t50_original": {
+        "spiral_rate": 0.10,
+        "mean_final_belief": 0.858,
+        "ambiguous_rate": 0.393,
+        "n": 20,
+        "time_horizon": 50
+      },
+      "reactive_auditor_t50_conservative_estimated": {
+        "spiral_rate": 0.06,
+        "note": "Estimated from ambiguous rate and original spiral rate"
+      }
+    },
+    "moderate_sycophancy": {
+      "baseline_original_coding": {
+        "spiral_rate": 1.00,
+        "mean_final_belief": 1.00,
+        "ambiguous_rate": 0.707,
+        "n": 20,
+        "time_horizon": 50
+      },
+      "baseline_conservative_coding": {
+        "spiral_rate": 0.259,
+        "note": "From conservative_coding_results.json: 0.2589098532494759"
+      },
+      "versioning_original_coding": {
+        "spiral_rate": 0.65,
+        "mean_final_belief": 0.888,
+        "ambiguous_rate": 0.719,
+        "n": 20,
+        "time_horizon": 50
+      },
+      "versioning_conservative_coding": {
+        "spiral_rate": 0.155,
+        "note": "From conservative_coding_results.json: 0.15544973544973548"
+      },
+      "reactive_auditor_t50_original": {
+        "spiral_rate": 0.00,
+        "mean_final_belief": 0.608,
+        "ambiguous_rate": 0.561,
+        "n": 20,
+        "time_horizon": 50
+      },
+      "reactive_auditor_t50_conservative": {
+        "spiral_rate": 0.00,
+        "note": "0% in both original and conservative"
+      }
+    },
+    "no_prompt": {
+      "baseline_original_coding": {
+        "spiral_rate": 0.00,
+        "mean_final_belief": 0.50,
+        "ambiguous_rate": 0.358,
+        "n": 20,
+        "time_horizon": 50
+      },
+      "baseline_conservative_coding": {
+        "spiral_rate": 0.00
+      },
+      "versioning_original_coding": {
+        "spiral_rate": 0.00,
+        "mean_final_belief": 0.50,
+        "ambiguous_rate": 0.348,
+        "n": 20,
+        "time_horizon": 50
+      },
+      "versioning_conservative_coding": {
+        "spiral_rate": 0.00
+      }
+    }
+  },
+  "summary": {
+    "total_api_cost_usd": 6.77,
+    "total_tokens": 677000,
+    "mean_ambiguous_rate": 0.497,
+    "ambiguous_rate_range": [0.348, 0.719],
+    "key_findings": {
+      "high_sycophancy_reduction_original": "100% → 65% (35pp reduction)",
+      "high_sycophancy_reduction_conservative": "55.8% → 37.0% (18.8pp reduction)",
+      "versioning_vs_reactive_t50": "Versioning 37.0% vs Reactive 6.0% (conservative)",
+      "learning_preservation": "Versioning P̄=0.876 vs Reactive P̄=0.858"
+    }
+  }
+}

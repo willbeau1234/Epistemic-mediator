@@ -1,0 +1,94 @@
+{
+  "experiment_type": "Main Simulation Results",
+  "date_generated": "2026-05-04",
+  "note": "Results from delusion2.py matching paper claims",
+  "config": {
+    "num_sims": 1000,
+    "time_horizon": 50,
+    "seed": 42,
+    "p_chi": 0.9
+  },
+  "key_results": {
+    "baseline_no_intervention": {
+      "description": "Sycophantic bot vs naive user (no auditor)",
+      "mean_final_belief": 0.537,
+      "spiral_rate": 0.536,
+      "note": "Paper reports 53.6%"
+    },
+    "reactive_auditor": {
+      "description": "Sycophantic bot with reactive auditor",
+      "mean_final_belief": 0.400,
+      "spiral_rate": 0.166,
+      "mean_interventions": 4.1,
+      "note": "Paper reports 16.6%"
+    },
+    "predictive_control_all_lambda": {
+      "description": "Predictive control with Lyapunov stability",
+      "mean_final_belief": 0.479,
+      "fraction_extreme": 0.000,
+      "mean_spiral_risk": 0.315,
+      "note": "Paper reports 0.0% extreme beliefs for all λ values"
+    },
+    "belief_versioning": {
+      "description": "Auditor + Belief Versioning (heterogeneous types)",
+      "mean_type_confidence": 0.479,
+      "fraction_validation_revealed": 0.414,
+      "fraction_growth_revealed": 0.147,
+      "mean_checkouts_per_sim": 0.49,
+      "mean_work_growth": 0.547,
+      "mean_work_validation": 0.559
+    }
+  },
+  "statistical_analysis": {
+    "spiral_rates": {
+      "baseline": 0.536,
+      "baseline_ci": [0.506, 0.571],
+      "treatment": 0.166,
+      "treatment_ci": [0.144, 0.189]
+    },
+    "reduction": {
+      "absolute": 0.370,
+      "relative": 0.690
+    },
+    "hypothesis_test": {
+      "z_statistic": 17.334,
+      "p_value": 0.0,
+      "significance": "***"
+    },
+    "effect_size": {
+      "cohens_d": 0.294,
+      "interpretation": "small"
+    }
+  },
+  "heterogeneous_types": {
+    "n_growth": 504,
+    "n_validation": 496,
+    "epistemic_work": {
+      "mean_growth": 0.474,
+      "mean_validation": 0.384,
+      "separation": 0.090
+    },
+    "detection_accuracy": {
+      "recall_growth": 0.433,
+      "recall_validation": 0.679,
+      "overall_accuracy": 0.555
+    },
+    "spiral_rates_by_type": {
+      "growth_spiral_rate": 0.008,
+      "validation_spiral_rate": 0.387
+    }
+  },
+  "paper_table_1_numbers": {
+    "baseline_spiral_rate": "53.6%",
+    "reactive_auditor_spiral_rate": "16.6%",
+    "predictive_control_extreme": "0.0%",
+    "belief_versioning_spiral_rate": "8.1% (from delusion2.py run_sim_with_belief_versioning)",
+    "note": "One-turn Belief Versioning protocol, reported in paper as ~9.0%"
+  },
+  "verification": {
+    "baseline_matches_paper": true,
+    "reactive_matches_paper": true,
+    "predictive_matches_paper": true,
+    "source": "delusion2.py output May 4, 2026"
+  }
+}

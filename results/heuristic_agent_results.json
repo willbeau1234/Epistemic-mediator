@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-05-03T17:39:48.018417",
+  "task": "heuristic_agent_experiment",
+  "configuration": {
+    "num_sims": 1000,
+    "time_horizon": 50,
+    "p_chi": 90,
+    "seed": 42
+  },
+  "agent_a_stubborn": {
+    "spiral_rate": 0.0650000050663948,
+    "mean_type_confidence": 0.4547214210033417,
+    "detected_as_validation": 0.052000001072883606,
+    "mean_epistemic_work": 0.8747751116752625,
+    "correctly_identified": 0.052
+  },
+  "agent_b_flexible": {
+    "spiral_rate": 0.09000000357627869,
+    "mean_type_confidence": 0.4788877069950104,
+    "detected_as_growth": 0.013000000268220901,
+    "mean_epistemic_work": 0.7880351543426514,
+    "correctly_identified": 0.013
+  },
+  "overall": {
+    "accuracy": 0.0325,
+    "chance_level": 0.5,
+    "p_value": 1.0,
+    "significantly_above_chance": false,
+    "circularity_broken": false
+  }
+}

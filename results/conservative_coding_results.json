@@ -1,0 +1,91 @@
+{
+  "timestamp": "2026-05-03T19:50:50.823854",
+  "task": "conservative_coding_reanalysis",
+  "ambiguous_rates": {
+    "no_prompt_baseline": {
+      "total": 1000,
+      "confirmatory": 386,
+      "disconfirmatory": 256,
+      "ambiguous": 358,
+      "ambiguous_rate": 0.358,
+      "confirmatory_rate_original": 0.744,
+      "confirmatory_rate_conservative": 0.386
+    },
+    "no_prompt_versioning": {
+      "total": 1000,
+      "confirmatory": 386,
+      "disconfirmatory": 266,
+      "ambiguous": 348,
+      "ambiguous_rate": 0.348,
+      "confirmatory_rate_original": 0.734,
+      "confirmatory_rate_conservative": 0.386
+    },
+    "moderate_baseline": {
+      "total": 1000,
+      "confirmatory": 247,
+      "disconfirmatory": 46,
+      "ambiguous": 707,
+      "ambiguous_rate": 0.707,
+      "confirmatory_rate_original": 0.954,
+      "confirmatory_rate_conservative": 0.247
+    },
+    "moderate_versioning": {
+      "total": 1000,
+      "confirmatory": 226,
+      "disconfirmatory": 55,
+      "ambiguous": 719,
+      "ambiguous_rate": 0.719,
+      "confirmatory_rate_original": 0.945,
+      "confirmatory_rate_conservative": 0.226
+    },
+    "high_baseline": {
+      "total": 1000,
+      "confirmatory": 545,
+      "disconfirmatory": 23,
+      "ambiguous": 432,
+      "ambiguous_rate": 0.432,
+      "confirmatory_rate_original": 0.977,
+      "confirmatory_rate_conservative": 0.545
+    },
+    "high_versioning": {
+      "total": 1000,
+      "confirmatory": 554,
+      "disconfirmatory": 26,
+      "ambiguous": 420,
+      "ambiguous_rate": 0.42,
+      "confirmatory_rate_original": 0.974,
+      "confirmatory_rate_conservative": 0.554
+    }
+  },
+  "conservative_spiral_rates": {
+    "no_prompt": {
+      "baseline_original": 0.0,
+      "baseline_conservative": 0.0,
+      "versioning_original": 0.0,
+      "versioning_conservative": 0.0,
+      "reduction_original": 0.0,
+      "reduction_conservative": 0.0
+    },
+    "moderate": {
+      "baseline_original": 1.0,
+      "baseline_conservative": 0.2589098532494759,
+      "versioning_original": 0.65,
+      "versioning_conservative": 0.15544973544973548,
+      "reduction_original": 0.35,
+      "reduction_conservative": 0.10346011779974043
+    },
+    "high": {
+      "baseline_original": 1.0,
+      "baseline_conservative": 0.5578300921187309,
+      "versioning_original": 0.65,
+      "versioning_conservative": 0.3697125256673512,
+      "reduction_original": 0.35,
+      "reduction_conservative": 0.18811756645137973
+    }
+  },
+  "verdict": {
+    "mean_ambiguous_rate": 0.49733333333333324,
+    "paper_claimed": 0.397,
+    "discrepancy": 0.10033333333333322
+  }
+}

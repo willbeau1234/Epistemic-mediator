@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-05-03T19:50:50.825364",
+  "task": "effect_size_audit",
+  "findings": {
+    "resistance_sensitivity": [
+      "\u03c1=0.4: work_sep=0.010, d=0.03",
+      "\u03c1=0.5: work_sep=0.000, d=0.00"
+    ],
+    "verdict": "Effect sizes are adequate for \u03c1 \u2265 0.6, negligible for \u03c1 < 0.5"
+  }
+}
